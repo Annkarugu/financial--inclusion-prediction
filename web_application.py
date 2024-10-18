@@ -10,7 +10,7 @@ Original file is located at
 import streamlit as st
 import numpy as np
 import joblib
-from google.colab import drive
+
 
 # Load the model
 model = joblib.load('/content/model (1).pkl')
