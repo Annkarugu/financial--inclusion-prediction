@@ -33,7 +33,7 @@ job_type = st.selectbox('Job Type', ['Dont know', 'Farming & Fishing', 'Formally
 
 # Encoding categorical variables
 country_map = {'Kenya': 0, 'Uganda': 1, 'Tanzania': 2, 'Rwanda': 3}
-cellphone_acess_map={'Yes':0, 'No':1}
+cellphone_access_map={'Yes':0, 'No':1}
 location_type_map = {'Rural': 0, 'Urban': 1}
 gender_map = {'Male': 0, 'Female': 1}
 relationship_map = {'Head of household': 0, 'Spouse': 1, 'Child': 2, 'Other relative': 3, 'Parent': 4}
