@@ -48,7 +48,7 @@ job_type_map = {
 # Map the user inputs to numeric values
 input_data = np.array([[country_map[country],
                         location_type_map[location_type],
-                        cellphone_access,
+                        cellphone_access_map,
                         household_size,
                         age_of_respondent,
                         gender_map[gender_of_respondent],
