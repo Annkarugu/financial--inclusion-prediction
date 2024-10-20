@@ -22,8 +22,7 @@ st.title('Bank Account Prediction')
 st.write('Enter the following features to predict Bank account:')
 country = st.selectbox('Country', ['Kenya', 'Uganda', 'Tanzania', 'Rwanda'])
 location_type = st.radio('Location Type', ['Rural', 'Urban'])
-cellphone_access = st.checkbox('Do you have cellphone access?')
-cellphone_access_str = 1 if cellphone_access else 0
+cellphone_access = st.selectbox('Yes','No')
 household_size = st.number_input('Household Size', min_value=1, max_value=50, value=1)
 age_of_respondent = st.number_input('Age of Respondent', min_value=18, max_value=100, value=25)
 gender_of_respondent = st.radio('Gender of Respondent', ['Male', 'Female'])
@@ -34,6 +33,7 @@ job_type = st.selectbox('Job Type', ['Dont know', 'Farming & Fishing', 'Formally
 
 # Encoding categorical variables
 country_map = {'Kenya': 0, 'Uganda': 1, 'Tanzania': 2, 'Rwanda': 3}
+cellphone_acess_map={'Yes':0, 'No':1}
 location_type_map = {'Rural': 0, 'Urban': 1}
 gender_map = {'Male': 0, 'Female': 1}
 relationship_map = {'Head of household': 0, 'Spouse': 1, 'Child': 2, 'Other relative': 3, 'Parent': 4}
@@ -48,7 +48,7 @@ job_type_map = {
 # Map the user inputs to numeric values
 input_data = np.array([[country_map[country],
                         location_type_map[location_type],
-                        cellphone_access_str,
+                        cellphone_access,
                         household_size,
                         age_of_respondent,
                         gender_map[gender_of_respondent],
