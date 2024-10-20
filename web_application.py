@@ -13,7 +13,7 @@ import joblib
 
 
 # Load the model
-model = joblib.load('/content/model (1).pkl')
+model = joblib.load('/content/model.pkl')
 
 # Title for the web application
 st.title('Bank Account Prediction')
