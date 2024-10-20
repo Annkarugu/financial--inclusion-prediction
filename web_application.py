@@ -13,7 +13,7 @@ import joblib
 
 
 # Load the model
-model = joblib.load('model(2).pkl')
+model = joblib.load('Randomforest.pkl')
 
 
 # Title for the web application
