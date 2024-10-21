@@ -47,7 +47,7 @@ input_data = np.array([[label_encoders['country'].transform([country])[0],
                         label_encoders['job_type'].transform([job_type])[0]]])
 
 # Create a dictionary for the prediction labels
-prediction_labels = {No: 'No Bank Account', Yes: 'Bank Account'}
+prediction_labels = {'No': 'No Bank Account', 'Yes': 'Bank Account'}
 
 # Prediction button
 if st.button('Predict'):
