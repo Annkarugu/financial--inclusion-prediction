@@ -56,17 +56,6 @@ input_data = np.array([[country_map[country],
                         marital_status_map[marital_status],
                         education_map[education_level],
                         job_type_map[job_type]]])
-# user input values
-input_data = np.array([[country,
-                        location_type,
-                        cellphone_access,
-                        household_size,
-                        age_of_respondent,
-                        gender_of_respondent,
-                        relationship_with_head,
-                        marital_status,
-                        education_level,
-                        job_type]])
 
 
 # Create a dictionary for the prediction labels
