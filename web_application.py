@@ -55,7 +55,7 @@ if st.button('Predict'):
     prediction = model.predict(input_data)
 
     # Convert numeric prediction to corresponding string label
-    prediction_result = prediction_labels.get(int(prediction[0]), "Unknown")
+    prediction_result = prediction_labels.get(prediction[0]), "Unknown")
 
 
     # Display the prediction result
