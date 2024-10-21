@@ -30,7 +30,7 @@ household_size = st.number_input('Household Size', min_value=1, max_value=50, va
 age_of_respondent = st.number_input('Age of Respondent', min_value=18, max_value=100, value=25)
 gender_of_respondent = st.radio('Gender of Respondent', ['Male', 'Female'])
 relationship_with_head = st.selectbox('Relationship with Head', ['Head of Household', 'Spouse', 'Child', 'Other relative', 'Parent'])
-marital_status = st.selectbox('Marital Status', ['Married/Living together', 'Married', 'Divorced/separated', 'Widowed', 'Single/Never married'])
+marital_status = st.selectbox('Marital Status', ['Married/Living together', 'Divorced/separated', 'Widowed', 'Single/Never married'])
 education_level = st.selectbox('Education Level', ['Secondary education', 'Primary education', 'No formal education', 'Vocational/Specialised Training'])
 job_type = st.selectbox('Job Type', ['Dont Know/Refuse to answer', 'Farming & Fishing', 'Formally employed Government', 'Formally employed Private', 'Government Dependent', 'Informally employed', 'No Income', 'Other Income', 'Remittance Dependent', 'Self employed'])
 
