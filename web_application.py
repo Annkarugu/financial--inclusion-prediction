@@ -31,8 +31,8 @@ age_of_respondent = st.number_input('Age of Respondent', min_value=18, max_value
 gender_of_respondent = st.radio('Gender of Respondent', ['Male', 'Female'])
 relationship_with_head = st.selectbox('Relationship with Head', ['Head of household', 'Spouse', 'Child', 'Other relative', 'Parent'])
 marital_status = st.selectbox('Marital Status', ['Married/Living together', 'Married', 'Divorced/separated', 'Widowed', 'Single/Never married'])
-education_level = st.selectbox('Education Level', ['Secondary Education', 'Primary Education', 'No Formal Education', 'Vocational/Specialised Training'])
-job_type = st.selectbox('Job Type', ['Dont know', 'Farming & Fishing', 'Formally Employed Government', 'Formally Employed Private', 'Government Dependent', 'Informally Employed', 'No Income', 'Other Income', 'Remittance Dependent', 'Self Employed'])
+education_level = st.selectbox('Education Level', ['Secondary education', 'Primary education', 'No formal education', 'Vocational/Specialised Training'])
+job_type = st.selectbox('Job Type', ['Dont know', 'Farming & Fishing', 'Formally employed Government', 'Formally employed Private', 'Government Dependent', 'Informally employed', 'No Income', 'Other Income', 'Remittance Dependent', 'Self employed'])
 
 # Map user inputs to numeric values using the loaded encoders
 input_data = np.array([[label_encoders['country'].transform([country])[0],
