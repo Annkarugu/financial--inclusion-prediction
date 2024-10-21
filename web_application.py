@@ -42,7 +42,8 @@ education_map = {'Secondary Education': 0, 'Primary Education': 1, 'No Formal Ed
 job_type_map = {
     'Dont know': 0, 'Farming & Fishing': 1, 'Formally Employed Government': 2,
     'Formally Employed Private': 3, 'Government Dependent': 4, 'Informally Employed': 5,
-    'No Income': 6, 'Other Income': 7, 'Remittance Dependent': 8, 'Self Employed': 
+    'No Income': 6, 'Other Income': 7, 'Remittance Dependent': 8, 'Self Employed': 9
+}
 
 # Map the user inputs to numeric values
 input_data = np.array([[country_map[country],
