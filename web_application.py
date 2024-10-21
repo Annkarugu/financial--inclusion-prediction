@@ -56,6 +56,7 @@ if st.button('Predict'):
 
     # Convert numeric prediction to corresponding string label
     prediction_result = prediction_labels.get(prediction[0], "Unknown")
+    st.write(f'Raw prediction: {prediction}') 
 
 
     # Display the prediction result
