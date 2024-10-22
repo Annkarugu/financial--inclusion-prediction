@@ -21,8 +21,6 @@ with open('label_encoders.pkl', 'rb') as file:
 
 # Title for the web application
 st.title('Bank Account Prediction')
-st.write('Input data shape:', input_data.shape)
-
 st.write('Enter the following features to predict Bank account:')
 country = st.selectbox('Country', ['Kenya', 'Uganda', 'Tanzania', 'Rwanda'])
 location_type = st.radio('Location Type', ['Rural', 'Urban'])
@@ -46,7 +44,9 @@ input_data = np.array([[label_encoders['country'].transform([country])[0],
                         label_encoders['marital_status'].transform([marital_status])[0],
                         label_encoders['education_level'].transform([education_level])[0],
                         label_encoders['job_type'].transform([job_type])[0]]])
-
+ 
+# Check the shape of input data
+st.write('Input data shape:', input_data.shape)
 # Create a dictionary for the prediction labels
 prediction_labels = {'No': 'No Bank Account', 'Yes': 'Bank Account'}
 
