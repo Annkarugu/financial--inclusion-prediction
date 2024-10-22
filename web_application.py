@@ -28,11 +28,10 @@ cellphone_access = st.selectbox('Cellphone Accessibility', ['Yes', 'No'])
 household_size = st.number_input('Household Size', min_value=1, max_value=50, value=1)
 age_of_respondent = st.number_input('Age of Respondent', min_value=18, max_value=100, value=25)
 gender_of_respondent = st.radio('Gender of Respondent', ['Male', 'Female'])
-relationship_with_head = st.selectbox('Relationship with Head', ['Head of Household', 'Spouse', 'Child', 'Other relative', 'Parent'])
 marital_status = st.selectbox('Marital Status', ['Married/Living together', 'Divorced/separated', 'Widowed', 'Single/Never Married'])
 education_level = st.selectbox('Education Level', ['Secondary education', 'Primary education', 'No formal education', 'Vocational/Specialised training'])
 job_type = st.selectbox('Job Type', ['Dont Know/Refuse to answer', 'Farming and Fishing', 'Formally employed Government', 'Formally employed Private', 'Government Dependent', 'Informally employed', 'No Income', 'Other Income', 'Remittance Dependent', 'Self employed'])
-
+relationship_with_head = st.selectbox('Relationship with Head', ['Head of Household', 'Spouse', 'Child', 'Other relative', 'Parent'])
 # Map user inputs to numeric values using the loaded encoders
 input_data = np.array([[label_encoders['country'].transform([country])[0],
                         label_encoders['location_type'].transform([location_type])[0],
@@ -40,10 +39,13 @@ input_data = np.array([[label_encoders['country'].transform([country])[0],
                         household_size,
                         age_of_respondent,
                         label_encoders['gender_of_respondent'].transform([gender_of_respondent])[0],
-                        label_encoders['relationship_with_head'].transform([relationship_with_head])[0],
                         label_encoders['marital_status'].transform([marital_status])[0],
                         label_encoders['education_level'].transform([education_level])[0],
-                        label_encoders['job_type'].transform([job_type])[0]]])
+                        label_encoders['job_type'].transform([job_type])[0],
+                        label_encoders['relationship_with_head'].transform([relationship_with_head])[0]]])
+                        
+                    
+                
  
 # Check the shape of input data
 st.write('Input data shape:', input_data.shape)
