@@ -62,7 +62,7 @@ if st.button('Predict'):
     st.write(f'Raw prediction: {prediction}') 
     
     # Display the raw prediction and probabilities
-    st.write(f'Raw prediction: {prediction}') 
+   
     st.write(f'Prediction probabilities: {prediction_proba}')
 
 
