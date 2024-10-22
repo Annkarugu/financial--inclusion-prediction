@@ -31,7 +31,7 @@ gender_of_respondent = st.radio('Gender of Respondent', ['Male', 'Female'])
 relationship_with_head = st.selectbox('Relationship with Head', ['Head of Household', 'Spouse', 'Child', 'Other relative', 'Parent'])
 marital_status = st.selectbox('Marital Status', ['Married/Living together', 'Divorced/separated', 'Widowed', 'Single/Never Married'])
 education_level = st.selectbox('Education Level', ['Secondary education', 'Primary education', 'No formal education', 'Vocational/Specialised training'])
-job_type = st.selectbox('Job Type', ['Dont Know/Refuse to answer', 'Farming & Fishing', 'Formally employed Government', 'Formally employed Private', 'Government Dependent', 'Informally employed', 'No Income', 'Other Income', 'Remittance Dependent', 'Self employed'])
+job_type = st.selectbox('Job Type', ['Dont Know/Refuse to answer', 'Farming and Fishing', 'Formally employed Government', 'Formally employed Private', 'Government Dependent', 'Informally employed', 'No Income', 'Other Income', 'Remittance Dependent', 'Self employed'])
 
 # Map user inputs to numeric values using the loaded encoders
 input_data = np.array([[label_encoders['country'].transform([country])[0],
