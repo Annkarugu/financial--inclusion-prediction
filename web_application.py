@@ -13,7 +13,7 @@ import pickle
 import joblib
 
 # Load the model
-model = joblib.load('Financialmodel.pkl')
+model = joblib.load('Financialinclusion.pkl')
 
 # Load the encoders
 with open('label_encoders.pkl', 'rb') as file:
