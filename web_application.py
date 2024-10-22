@@ -21,6 +21,7 @@ with open('label_encoders.pkl', 'rb') as file:
 
 # Title for the web application
 st.title('Bank Account Prediction')
+st.write('Input data shape:', input_data.shape)
 
 st.write('Enter the following features to predict Bank account:')
 country = st.selectbox('Country', ['Kenya', 'Uganda', 'Tanzania', 'Rwanda'])
