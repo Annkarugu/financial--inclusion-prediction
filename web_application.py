@@ -50,22 +50,24 @@ st.write('Input data shape:', input_data.shape)
 # Create a dictionary for the prediction labels
 prediction_labels = {'No': 'No Bank Account', 'Yes': 'Bank Account'}
 
-# Prediction button
 if st.button('Predict'):
-    # Make prediction using the loaded model
+    # Make prediction using the loaded model (returns raw labels like "Yes"/"No")
     prediction = model.predict(input_data)
-     # Get prediction probabilities
-    prediction_proba = model.predict_proba(input_data)
-
-    # Convert numeric prediction to corresponding string label
-    prediction_result = prediction_labels.get(prediction[0], "Unknown")
-    st.write(f'Raw prediction: {prediction}') 
     
-    # Display the raw prediction and probabilities
-   
+    # Get prediction probabilities
+    prediction_proba = model.predict_proba(input_data)
+    
+    # Display raw prediction and probabilities for debugging
+    st.write(f'Raw prediction: {prediction}')
     st.write(f'Prediction probabilities: {prediction_proba}')
-
-
-    # Display the prediction result
+    
+    # Since no encoding, just display the predicted label directly
+    prediction_result = prediction[0]  # Directly use the predicted string
+    
+    # Display the final prediction result
     st.write(f'Predicted outcome: {prediction_result}')
+
+
+
+  
 
