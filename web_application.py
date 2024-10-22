@@ -54,10 +54,16 @@ prediction_labels = {'No': 'No Bank Account', 'Yes': 'Bank Account'}
 if st.button('Predict'):
     # Make prediction using the loaded model
     prediction = model.predict(input_data)
+     # Get prediction probabilities
+    prediction_proba = model.predict_proba(input_data)
 
     # Convert numeric prediction to corresponding string label
     prediction_result = prediction_labels.get(prediction[0], "Unknown")
     st.write(f'Raw prediction: {prediction}') 
+    
+    # Display the raw prediction and probabilities
+    st.write(f'Raw prediction: {prediction}') 
+    st.write(f'Prediction probabilities: {prediction_proba}'
 
 
     # Display the prediction result
